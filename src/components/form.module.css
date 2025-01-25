@@ -1,0 +1,50 @@
+.form {
+    display: flex;
+    gap: 12px; /* Slightly increased spacing for better layout */
+    margin-bottom: 24px; /* Balanced margin for consistent spacing */
+    align-items: center; /* Vertically align input and button */
+    justify-content: center; /* Center the form horizontally */
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.input {
+    flex: 1; /* Ensures the input field stretches appropriately */
+    padding: 12px; /* More comfortable padding */
+    font-size: 1rem; /* Scalable font size */
+    border: 1px solid #ddd; /* Softer border color */
+    border-radius: 6px; /* Slightly smoother corners */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean font */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow for depth */
+}
+
+.input:focus {
+    border-color: #007bff; /* Highlights input on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.4); /* Subtle glow effect */
+    outline: none; /* Removes default outline */
+}
+
+.button {
+    padding: 12px 20px; /* Comfortable button size */
+    font-size: 1rem; /* Scalable font size */
+    background-color: #007bff; /* Consistent primary color */
+    color: #fff; /* High contrast text */
+    border: none; /* Removes default border */
+    border-radius: 6px; /* Smooth rounded corners */
+    cursor: pointer; /* Indicates clickability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Matches input font */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.button:active {
+    background-color: #004085; /* Even darker shade on click */
+    transform: translateY(0); /* Resets lift on click */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inner shadow for pressed effect */
+}

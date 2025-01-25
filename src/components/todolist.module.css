@@ -1,0 +1,71 @@
+.todoList {
+    margin-top: 24px; /* Increased spacing for a cleaner layout */
+    max-width: 600px; /* Restrict width for better readability */
+    margin-left: auto; /* Centers the list horizontally */
+    margin-right: auto;
+    padding: 10px; /* Add padding to the container */
+    background-color: #f9f9f9; /* Subtle background for contrast */
+    border-radius: 8px; /* Rounded edges for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px; /* Comfortable padding */
+    border: 1px solid #e0e0e0; /* Softer border color */
+    border-radius: 8px; /* Smoother rounded corners */
+    margin-bottom: 12px; /* Better spacing between items */
+    background-color: #ffffff; /* Clean white background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.todoItem:hover {
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.todoItem.completed {
+    background-color: #e8f5e9; /* Soft green background for completed items */
+    border-color: #c8e6c9; /* Match border to the green theme */
+}
+
+.todoItem.completed .todoText {
+    text-decoration: line-through; /* Strike-through for completed items */
+    color: #757575; /* Muted color for completed text */
+}
+
+.todoText {
+    flex: 1; /* Ensures the text stretches appropriately */
+    margin-left: 10px;
+    font-size: 1rem; /* Scalable font size */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    color: #333; /* Darker text for better readability */
+}
+
+.actionButton {
+    padding: 8px 12px; /* Larger padding for a better click area */
+    font-size: 0.9rem; /* Adjusted font size for better fit */
+    font-weight: 600; /* Slightly bolder for emphasis */
+    background-color: #f44336; /* Red color for delete button */
+    color: #ffffff; /* High contrast text color */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Smooth rounded corners */
+    cursor: pointer; /* Indicates clickability */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.actionButton:hover {
+    background-color: #d32f2f; /* Darker shade on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.actionButton:active {
+    background-color: #b71c1c; /* Even darker shade on click */
+    transform: translateY(0); /* Reset lift on click */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Pressed button effect */
+}

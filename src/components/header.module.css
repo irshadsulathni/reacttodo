@@ -1,0 +1,20 @@
+.header {
+    background-color: #fdd835; /* A softer, sophisticated yellow */
+    color: #212121; /* A deep grey for excellent readability */
+    font-size: 1.5rem; /* Responsive font size */
+    font-weight: 600; /* Medium boldness for a modern look */
+    text-align: center; /* Center aligns the text */
+    padding: 20px 15px; /* Balanced spacing for all devices */
+    border-radius: 12px; /* Smoother rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly pronounced shadow for elegance */
+    margin: 20px auto; /* Adds space and centers the header horizontally */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    max-width: 80%; /* Limits width for better design on larger screens */
+    letter-spacing: 0.5px; /* Slightly increased spacing for readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth animation */
+}
+
+.header:hover {
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}

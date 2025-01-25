@@ -1,0 +1,13 @@
+body {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Ensures no extra padding */
+    background-color: #f4f4f9; /* Light background for a clean look */
+    font-family: 'Arial', sans-serif; /* Clean and professional font */
+    color: #333; /* Default text color for good readability */
+    line-height: 1.6; /* Adds consistent spacing between lines */
+    display: flex; /* Makes it easier to align content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    height: 100vh; /* Ensures the page takes the full viewport height */
+    box-sizing: border-box; /* Ensures padding doesn't affect element sizes */
+}
