@@ -6,11 +6,16 @@ export default function Form({ todos, setTodos }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (todo.trim() !== '') {
-            const newTodo = { text: todo, completed: false }; // Add a completed property
-            setTodos([...todos, newTodo]); // Add new todo object
-            setTodo('');
+        const trimmedTodo = todo.trim();
+
+        if (trimmedTodo === '') {
+            alert("Todo cannot be empty!");
+            return;
         }
+
+        const newTodo = { text: trimmedTodo, completed: false };
+        setTodos([...todos, newTodo]); 
+        setTodo('');
     }
 
     return (
