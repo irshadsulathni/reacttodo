@@ -1,7 +1,7 @@
 
 import Header from "./components/Header"
 import Todo from "./components/Todo"
-import './app.css'
+import './App.css'
 
 function App() {
   return (
@@ -12,7 +12,4 @@ function App() {
     </div>
   )
 }
-
-
-
 export default App
