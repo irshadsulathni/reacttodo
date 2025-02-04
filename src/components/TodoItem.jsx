@@ -6,12 +6,12 @@ export default function TodoItem({ item, onDelete, onToggle }) {
             <input 
                 type="checkbox" 
                 checked={item.completed} 
-                onChange={() => onToggle(item)} // Toggle the completed state
+                onChange={onToggle} // ✅ Toggle completion
             />
             <span className={styles.todoText}>{item.text}</span>
             <button 
                 className={styles.actionButton} 
-                onClick={() => onDelete(item)} // Trigger deletion
+                onClick={onDelete} // ✅ Delete
             >
                 x
             </button>

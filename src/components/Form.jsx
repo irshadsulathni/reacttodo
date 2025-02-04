@@ -14,7 +14,7 @@ export default function Form({ todos, setTodos }) {
         }
 
         const newTodo = { text: trimmedTodo, completed: false };
-        setTodos([...todos, newTodo]); 
+        setTodos([...todos, newTodo]);  // ✅ Update Parent State
         setTodo('');
     }
 

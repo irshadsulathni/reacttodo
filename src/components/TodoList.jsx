@@ -1,20 +1,25 @@
+import { useState } from "react";
 import TodoItem from "./TodoItem";
 import styles from './todolist.module.css';
 
 export default function TodoList({ todos, setTodos }) {
-    // Function to handle deleting a todo
-    function handleDelete(itemToRemove) {
-        const updatedTodos = todos.filter((todo) => todo !== itemToRemove);
+    console.log("Current Todos:", todos); // Debugging
+
+    // Handle deleting a todo
+    function handleDelete(indexToRemove) {
+        const updatedTodos = todos.filter((_, index) => index !== indexToRemove);
         setTodos(updatedTodos);
     }
 
-    // Function to toggle the completed state of a todo
-    function toggleCompleted(itemToToggle) {
-        const updatedTodos = todos.map((todo) =>
-            todo === itemToToggle ? { ...todo, completed: !todo.completed } : todo
+    // Toggle completed state
+    function toggleCompleted(indexToToggle) {
+        const updatedTodos = todos.map((todo, index) =>
+            index === indexToToggle ? { ...todo, completed: !todo.completed } : todo
         );
         setTodos(updatedTodos);
     }
+
+    const [inputVal, setInputVal] = useState('')
 
     return (
         <div className={styles.todoList}>
@@ -22,8 +27,8 @@ export default function TodoList({ todos, setTodos }) {
                 <TodoItem 
                     key={index} 
                     item={item} 
-                    onDelete={handleDelete} 
-                    onToggle={toggleCompleted} 
+                    onDelete={() => handleDelete(index)} 
+                    onToggle={() => toggleCompleted(index)} 
                 />
             ))}
         </div>
