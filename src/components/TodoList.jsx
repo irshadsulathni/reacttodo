@@ -19,8 +19,6 @@ export default function TodoList({ todos, setTodos }) {
         setTodos(updatedTodos);
     }
 
-    const [inputVal, setInputVal] = useState('')
-
     return (
         <div className={styles.todoList}>
             {todos.map((item, index) => (
