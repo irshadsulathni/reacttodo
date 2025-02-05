@@ -13,13 +13,6 @@ export default function Form({ todos, setTodos }) {
             return;
         }
 
-        const existingTodos = todos.find((item => item.text.toLowerCase() === trimmedTodo.toLowerCase()))
-
-        if(existingTodos){
-            alert('Todo already Exisits')
-            return;
-        }
-
         const newTodo = { text: trimmedTodo, completed: false };
         setTodos([...todos, newTodo]); 
         setTodo('');
